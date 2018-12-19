@@ -1,6 +1,5 @@
 #include <avr/io.h> /* Register defs */
 #include <util/delay.h> /* Delays library */
-#include <stdio.h>
 
 #define STEPPER_PIN_1 PB0
 #define STEPPER_PIN_2 PB1
@@ -9,7 +8,7 @@
 
 
 
-int degrees_to_steps(unsigned int degrees)
+int degrees_to_steps(unsigned int degrees) 
 {
 	uint16_t steps=0, n=0;
 
