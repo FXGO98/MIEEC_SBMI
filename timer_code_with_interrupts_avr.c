@@ -14,7 +14,7 @@ int main ()
 
 	DDRB = 0b00000001;
 
-	TCCR1B |= ((1<<CS12)|(1<<WGM12)); //prescale 256 and Wave Generation Mode 12 (Clear To Compare)
+	TCCR1B |= ((1<<CS12)|(1<<WGM12)); //prescale 256 and Wave Generation Mode 12 (Clear Timer on Compare)
 	TIMSK1 |= (1<<OCIE1A); // Time Interrupt Mask (Requests interrupt when TCNT1 = OCR1A)
 
 	OCR1A = 62500;  // Value which will allow the interrupt to begin (16M/256= 62500)
